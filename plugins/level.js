@@ -74,29 +74,29 @@ let name = conn.getName(m.sender)
 let user = global.db.data.users[m.sender]
 if (!canLevelUp(user.level, user.exp, global.multiplier)) {
 let { min, xp, max } = xpRange(user.level, global.multiplier)
-throw `╮ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ╭ـ
-˼🤴🏼˹┆ الـاسـم┆⌟${name}⌜
-˼🔮˹┆الـمـسـتـوي┆⌟${user.level}⌜
-˼🎖️˹┆رتـبــتـك┆⌟${role}⌜
-˼🚀˹┆رصــيـدك┆⌟${user.exp}⌜
-╯ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ╰ـ
+throw `*╮ ─ ⋆⋆ ─ ⋆⋆ ── ⋆⋆ ── ⋆⋆ ─ ⋆⋆ ─ ⋆⋆ ╭ـ*
+*˼✍🏻˹┆ الـاسـم┆⌟${name}⌜*
+*˼🔮˹┆الـمـسـتـوي┆⌟${user.level}⌜*
+*˼🎖️˹┆رتـبــتـك┆⌟${role}⌜
+*˼🚀˹┆رصــيـدك┆⌟${user.exp}⌜*
+*╯ ─ ⋆⋆ ─ ⋆⋆ ── ⋆⋆ ── ⋆⋆ ─ ⋆⋆ ─ ⋆⋆ ╰ـ*
 > ˼📯˹ مــلـاحـــظـــة ⇅ ↶
-╮ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ╭ـ
+*╮ ─ ⋆⋆ ─ ⋆⋆ ── ⋆⋆ ── ⋆⋆ ─ ⋆⋆ ─ ⋆⋆ ╭ـ*
 > 🧶 تحتاج الي ⌟${user.exp - min}/${xp}⌜ نقطة لي الارتفاع في المستوي 
-╯ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ╰ـ
-> 𝐅𝐋𝐀𝐒𝐇-𝐁𝐎𝐓 © 𝐁𝐘 𝐍𝐀𝐑𝐔𝐓𝐎&𝐙𝐀𝐂𝐊
+*╯ ─ ⋆⋆ ─ ⋆⋆ ── ⋆⋆ ── ⋆⋆ ─ ⋆⋆ ─ ⋆⋆ ╰ـ*
+> *𝕆𝕄ℕ𝕀𝕊ℂ𝕀𝔼ℕ𝕋-𝑩𝑶𝑻 © 𝐁𝐘 FȺNǤ*
 `.trim()}
 
 let before = user.level * 1
 while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
 if (before !== user.level) {
 let teks = `عاش يا حب! ${conn.getName(m.sender)} المستوي: ${user.level}`
-let str = `👑 𝐅𝐋𝐀𝐒𝐇﹝⚡﹞𝐁𝐎𝐓 - 𝐍𝐀𝐑𝐔𝐓𝐎&𝐙𝐀𝐂𝐊
+let str = ` *𝕆𝕄ℕ𝕀𝕊ℂ𝕀𝔼ℕ𝕋﹝⚡﹞𝑩𝑶𝑻 - 𝐁𝐘 FȺNǤ*
 *╭━⊰ ${name}⁩ ⊱━დ*
 *┃ الـمـسـتـوي السابق: ${before}*
 *┃ الـمـسـتـوي الحالي: ${user.level}*
-*┃ رتـبــتـك:* *‎${role}*
-> 𝐅𝐋𝐀𝐒𝐇-𝐁𝐎𝐓 © 𝐁𝐘 𝐍𝐀𝐑𝐔𝐓𝐎&𝐙𝐀𝐂𝐊
+*┃ رتـبــتـك: ${role}
+> *𝕆𝕄ℕ𝕀𝕊ℂ𝕀𝔼ℕ𝕋-𝑩𝑶𝑻*
 *╰━⊰ 🎖️ مستوى جديد 🎖️ ⊱━━დ*
 
 *_لقد وصلت إلى مستوى جديد!!!_*`.trim()
