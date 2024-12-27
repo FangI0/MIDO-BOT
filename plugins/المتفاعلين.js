@@ -26,7 +26,7 @@ ${sortedLim.slice(0, len).map(({ jid, limit }, i) => `${i + 1}. ${participants.s
 
 ${sortedLevel.slice(0, len).map(({ jid, level }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *مستوى ${level}*`).join`\n`}
 
-𝑩𝒚 : ♕𝑀𝐼𝐷𝛩🐥♕ `.trim()
+𝑩𝒚 :𝑭𝑨𝑵𝑮 `.trim()
   m.reply(text, null, { mentions: conn.parseMention(text) })
 }
 handler.help = ['top']
