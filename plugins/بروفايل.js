@@ -13,8 +13,6 @@ let handler = async (m, { conn }) => {
 . . . *🔰 بروفايلك 🔰* . . .
 💌 • *الاسم:* ${username} 
 📧 • *المنشن:* @${who.replace(/@.+/, '')}
-📞 • *الرقم:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
-🔗 • *اللينك:* https://wa.me/${who.split`@`[0]}
 🎨 • *العمر:* ${registered ? age : ''}
 💎 • *الماسك: ${diamond} Usos* 
 📑 • *مسجل:* ${registered ? '✅': '❌'}
