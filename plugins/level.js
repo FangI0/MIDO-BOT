@@ -75,10 +75,10 @@ let user = global.db.data.users[m.sender]
 if (!canLevelUp(user.level, user.exp, global.multiplier)) {
 let { min, xp, max } = xpRange(user.level, global.multiplier)
 throw `*╮───────────────────╭ـ*
-*˼✍🏻˹┆ الـاسـم┆⌟${name}⌜*
-*˼🔮˹┆الـمـسـتـوي┆⌟${user.level}⌜*
-*˼🎖️˹┆رتـبــتـك┆⌟${role}⌜
-*˼🚀˹┆رصــيـدك┆⌟${user.exp}⌜*
+*┃˼✍🏻˹┆ الـاسـم┆⌟${name}⌜*
+*┃˼🔮˹┆الـمـسـتـوي┆⌟${user.level}⌜*
+*┃˼🎖️˹┆رتـبــتـك┆⌟${role}⌜*
+*┃˼🚀˹┆رصــيـدك┆⌟${user.exp}⌜*
 *╯───────────────────╰ـ*
 > ˼📯˹ مــلـاحـــظـــة ⇅ ↶
 *╮───────────────────╭ـ*
@@ -101,7 +101,7 @@ let str = `
 *_لقد وصلت إلى مستوى جديد واصل السمو!!!_*`.trim()
 try {
 const img = await levelup(teks, user.level)
-conn.sendMessage(m.chat, {image: {url: gataImg}, caption: str, mentions: conn.parseMention(str)}, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+conn.sendMessage(m.chat, {image: {urlhttps://telegra.ph/file/f4f9d2420ac2b1072eb2e.jpg'}, caption: str, mentions: conn.parseMention(str)}, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 //conn.sendFile(m.chat, img, 'levelup.jpg', str, m)
 } catch (e) {
 m.reply(str)
